@@ -8,13 +8,21 @@
  *
  * @author hp
  */
-public class bank {
-    int simpanuang (int nilai1, int nilai2){
-    int hasil = nilai1+nilai2;
-    return hasil;
-    }
-    int ambiluang(int nilai1, int nilai2){
-    int hasil = nilai1-nilai2;
-    return hasil;
-    }      
+public class Bank {
+    int saldo = 100000;
+   public void ambilMoney(int c){
+       saldo = saldo - c;
+       if(saldo <= saldo){
+           System.out.println("saldo Kurang");
+       }else
+    System.out.println("Saldo saat ini : " + saldo);
+            
+   }
+   public void simpanMoney(int c){
+       saldo = saldo + c;
+     System.out.println("Saldo saat ini : " + saldo);      
+   }
+    public void getSaldo(){
+    System.out.println("Saldo saat ini : " + saldo);      
+   }  
 }
