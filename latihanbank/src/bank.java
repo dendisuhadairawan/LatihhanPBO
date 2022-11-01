@@ -12,9 +12,7 @@ public class Bank {
     int saldo = 100000;
    public void ambilMoney(int c){
        saldo = saldo - c;
-       if(saldo <= saldo){
-           System.out.println("saldo Kurang");
-       }else
+       
     System.out.println("Saldo saat ini : " + saldo);
             
    }
