@@ -8,31 +8,27 @@
  *
  * @author hp
  */
-public class bankberaksi {
 
+import static java.lang.Integer.parseInt;
+
+
+public class BankBeraksi {
+public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        int saldo = 100000;
-        
-        System.out.println("Selamat Datang di Bank ABC");
-        System.out.println("Saldo Saat Ini : RP."+ saldo);
-       
-       bank uang = new bank();
-       
-       System.out.println("Simpan uang : RP.500000");
-        int a = uang.simpanuang(500000,saldo);
-        System.out.println("Saldo saat ini : RP."+a);
-  
-        System.out.println("ambil uang : RP.150000");
-        
-        int b = uang.ambiluang(a,150000);
-        System.out.println("Saldo saat ini : RP."+b);
-        
-        
-    }
+    Bank operasi = new Bank();
+    System.out.println("Selamat Datang di Bank ");
+    operasi.getSaldo();
     
+    System.out.println("Simpan Uang : Rp. " );
+    int input=parseInt(scanner.nextLine());
+    operasi.simpanMoney(input);
+    
+    System.out.println("Ambil Uang : Rp. ");
+    input=parseInt(scanner.nextLine());
+    operasi.ambilMoney(input);
+    
+    }
 }
